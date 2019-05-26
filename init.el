@@ -32,7 +32,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-configuration-layers
    '(
      (ivy :variables ivy-enable-advanced-buffer-information nil)
-     better-defaults
+     (better-defaults :variables better-defaults-move-to-end-of-code-first t)
      ranger
      colors
      prodigy
@@ -575,10 +575,7 @@ dump."
   (spacemacs/set-leader-keys "otm" 'zilongshanren/toggle-major-mode)
 
   (setq inhibit-compacting-font-caches t)
-  (when (version<= "26.0.50" emacs-version )
-    (global-display-line-numbers-mode))
-  (global-display-line-numbers-mode -1)
-
+  
   (defun moon-override-yank-pop (&optional arg)
     "Delete the region before inserting poped string."
     (when (and evil-mode (eq 'visual evil-state))
@@ -638,3 +635,5 @@ This is an auto-generated function, do not modify its content directly, use
 Emacs customize menu instead.
 This function is called at the very end of Spacemacs initialization."
 )
+
+(setq global-linum-mode t)
