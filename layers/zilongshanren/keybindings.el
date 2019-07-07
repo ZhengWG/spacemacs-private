@@ -18,7 +18,7 @@
 (define-key 'help-command (kbd "C-i") 'info-display-manual)
 
 ;; (define-key 'ivy-occur-grep-mode-map (kbd "C-d") 'evil-scroll-down)
-
+(global-set-key (kbd "C-x p s") 'find-file-in-project)
 (global-set-key [(shift return)] 'zilongshanren/smart-open-line)
 (global-set-key (kbd "s-/") 'hippie-expand)
 (global-set-key (kbd "C-c a") 'org-agenda)

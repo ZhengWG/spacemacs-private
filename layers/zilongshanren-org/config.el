@@ -17,4 +17,6 @@
   (add-to-list 'ispell-skip-region-alist '("=" "="))
   (add-to-list 'ispell-skip-region-alist '("^#\\+BEGIN_SRC" . "^#\\+END_SRC")))
 
+(add-hook 'org-mode-hook 'toggle-truncate-lines)
+
 (add-hook 'org-mode-hook #'zilongshanren/org-ispell)
