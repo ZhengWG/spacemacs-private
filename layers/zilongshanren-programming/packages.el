@@ -143,9 +143,17 @@
     (remove-hook 'emacs-lisp-mode-hook 'auto-compile-mode))
 
 (defun zilongshanren-programming/post-init-python ()
-  (add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+  (add-hook 'python-mode-hook #'(lambda ()
+                                  (semantic-mode 1)
+                                  (flycheck-mode 1)
+                                  (setq flycheck-checker 'python-flake8
+                                        flycheck-checker-error-threshold 900
+                                        flycheck-flake8rc "~/.flake8rc")
+                                  (setq flycheck-python-flake8-executable "flake8")
+                                  (modify-syntax-entry ?_ "w")))
   ;; if you use pyton3, then you could comment the following line
-  (setq python-shell-interpreter "python"))
+  (setq python-shell-interpreter "ipython3")
+  )
 
 (defun zilongshanren-programming/post-init-js-doc ()
   (setq js-doc-mail-address "guanghui8827@gmail.com"
@@ -457,6 +465,12 @@
     ))
 
 (defun zilongshanren-programming/post-init-cc-mode ()
+  (add-hook 'c++-mode-hook (lambda ()
+                             (flycheck-mode 1)
+                             (setq flycheck-gcc-language-standard "c++11")))
+  (add-hook 'c-mode-hook (lambda ()
+                             (flycheck-mode 1)
+                             (setq flycheck-gcc-language-standard "c++11")))
   (progn
     (setq company-backends-c-mode-common '((company-dabbrev-code :with company-keywords company-gtags company-etags)
                                            company-files company-dabbrev))

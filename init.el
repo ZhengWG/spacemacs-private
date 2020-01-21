@@ -98,7 +98,7 @@ This function should only modify configuration layer settings."
    ;; To use a local version of a package, use the `:location' property:
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(sicp ssh-agency)
+   dotspacemacs-additional-packages '(sicp ssh-agency py-autopep8)
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -575,7 +575,6 @@ dump."
   (spacemacs/set-leader-keys "otm" 'zilongshanren/toggle-major-mode)
 
   (setq inhibit-compacting-font-caches t)
-  
   (defun moon-override-yank-pop (&optional arg)
     "Delete the region before inserting poped string."
     (when (and evil-mode (eq 'visual evil-state))
@@ -635,16 +634,3 @@ This is an auto-generated function, do not modify its content directly, use
 Emacs customize menu instead.
 This function is called at the very end of Spacemacs initialization."
 )
-(progn
-  ;; Make whitespace-mode with very basic background coloring for whitespaces.
-  ;; http://ergoemacs.org/emacs/whitespace-mode.html
-  (setq whitespace-style (quote (face spaces tabs newline space-mark tab-mark newline-mark )))
-
-  ;; Make whitespace-mode and whitespace-newline-mode use “¶” for end of line char and “▷” for tab.
-  (setq whitespace-display-mappings
-        ;; all numbers are unicode codepoint in decimal. e.g. (insert-char 182 1)
-        '(
-          (space-mark 32 [183] [46]) ; SPACE 32 「 」, 183 MIDDLE DOT 「·」, 46 FULL STOP 「.」
-          (newline-mark 10 [182 10]) ; LINE FEED,
-          (tab-mark 9 [9655 9] [92 9])  ; tab
-          )))
