@@ -146,10 +146,10 @@
   (add-hook 'python-mode-hook #'(lambda ()
                                   (semantic-mode 1)
                                   (flycheck-mode 1)
-                                  (setq flycheck-checker 'python-flake8
+                                  (setq flycheck-checker 'python-pylint
                                         flycheck-checker-error-threshold 900
-                                        flycheck-flake8rc "~/.flake8rc")
-                                  (setq flycheck-python-flake8-executable "flake8")
+                                        flycheck-pylintrc "~/.pylintrc")
+                                  (setq flycheck-python-pylint-executable "pylint")
                                   (modify-syntax-entry ?_ "w")))
   ;; if you use pyton3, then you could comment the following line
   (setq python-shell-interpreter "ipython3")
