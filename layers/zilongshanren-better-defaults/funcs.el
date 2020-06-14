@@ -150,6 +150,8 @@ open and unsaved."
   (interactive)
   (save-excursion (insert " ")))
 
+(defun insert-current-date () (interactive)
+       (insert (shell-command-to-string "echo -n $(date +%Y-%m-%d-%H:%M:%S)")))
 
 (defmacro dakra-define-up/downcase-dwim (case)
   (let ((func (intern (concat "dakra-" case "-dwim")))
