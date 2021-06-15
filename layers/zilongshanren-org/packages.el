@@ -354,14 +354,14 @@ unwanted space when exporting org-mode to html."
                 (tags-todo "PROJECT") ;; review all projects (assuming you use todo keywords to designate projects)
                 ))))
 
-      (defvar zilongshanren-website-html-preamble
+      (defvar wengangzheng-website-html-preamble
         "<div class='nav'>
 <ul>
-<li><a href='http://zilongshanren.com'>博客</a></li>
+<li><a href='http://johneyzheng.top'>博客</a></li>
 <li><a href='/index.html'>Wiki目录</a></li>
 </ul>
 </div>")
-      (defvar zilongshanren-website-html-blog-head
+      (defvar wengangzheng-website-html-blog-head
         " <link rel='stylesheet' href='css/site.css' type='text/css'/> \n
     <link rel=\"stylesheet\" type=\"text/css\" href=\"/css/worg.css\"/>")
       (setq org-publish-project-alist
@@ -372,16 +372,16 @@ unwanted space when exporting org-mode to html."
                :publishing-directory "~/org-notes/public_html/"
 
                :recursive t
-               :html-head , zilongshanren-website-html-blog-head
+               :html-head , wengangzheng-website-html-blog-head
                :publishing-function org-html-publish-to-html
                :headline-levels 4       ; Just the default for this project.
                :auto-preamble t
                :exclude "gtd.org"
                :exclude-tags ("ol" "noexport")
                :section-numbers nil
-               :html-preamble ,zilongshanren-website-html-preamble
-               :author "zilongshanren"
-               :email "guanghui8827@gmail.com"
+               :html-preamble ,wengangzheng-website-html-preamble
+               :author "wengang.zheng"
+               :email "zwg0606@gmail.com"
                :auto-sitemap t          ; Generate sitemap.org automagically...
                :sitemap-filename "index.org" ; ... call it sitemap.org (it's the default)...
                :sitemap-title "我的wiki"     ; ... with title 'Sitemap'.
@@ -497,7 +497,7 @@ holding contextual information."
     :defer t))
 
 (defun zilongshanren-org/post-init-ox-reveal ()
-  (setq org-reveal-root "file:///Users/guanghui/.emacs.d/reveal-js"))
+  (setq org-reveal-root "file:///Users/wengangzheng/.emacs.d/reveal-js"))
 
 
 (defun zilongshanren-org/init-org-tree-slide ()

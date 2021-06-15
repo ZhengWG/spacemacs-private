@@ -146,19 +146,19 @@
   (add-hook 'python-mode-hook #'(lambda ()
                                   (semantic-mode 1)
                                   (flycheck-mode 1)
-                                  (setq flycheck-checker 'python-pylint
+                                  (setq flycheck-checker 'python-flake8
                                         flycheck-checker-error-threshold 900
-                                        flycheck-pylintrc "~/.pylintrc")
-                                  (setq flycheck-python-pylint-executable "pylint")
+                                        flycheck-flake8rc "~/.config/.flake8")
+                                  (setq flycheck-python-flake8-executable "flake8")
                                   (modify-syntax-entry ?_ "w")))
   ;; if you use pyton3, then you could comment the following line
   (setq python-shell-interpreter "ipython3")
   )
 
 (defun zilongshanren-programming/post-init-js-doc ()
-  (setq js-doc-mail-address "guanghui8827@gmail.com"
-        js-doc-author (format "Guanghui Qu <%s>" js-doc-mail-address)
-        js-doc-url "http://www.zilongshanren.com"
+  (setq js-doc-mail-address "zwg0606@gmail.com"
+        js-doc-author (format "Wengang Zheng <%s>" js-doc-mail-address)
+        js-doc-url "http://www.johneyzheng.top"
         js-doc-license "MIT")
 
   )
@@ -590,4 +590,4 @@
            ("/usr/include/" "/usr/local/include/" "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1")))
     (setq company-c-headers-path-user
           (quote
-           ("/Users/guanghui/cocos2d-x/cocos/platform" "/Users/guanghui/cocos2d-x/cocos" "." "/Users/guanghui/cocos2d-x/cocos/audio/include/")))))
+           ("/Users/wengangzheng/cocos2d-x/cocos/platform" "/Users/wengangzheng/cocos2d-x/cocos" "." "/Users/wengangzheng/cocos2d-x/cocos/audio/include/")))))

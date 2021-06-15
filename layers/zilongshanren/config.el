@@ -11,11 +11,11 @@
     (setq
      org-agenda-dir "f:/org-notes"
      deft-dir "f:/org-notes"
-     blog-admin-dir "f:/zilongshanren.com")
+     blog-admin-dir "f:/johneyzheng.top")
   (setq
    org-agenda-dir "~/org-notes"
    deft-dir "~/org-notes"
-   blog-admin-dir "~/zilongshanren.com"))
+   blog-admin-dir "~/johneyzheng.top"))
 
 
 ;;load sensitive data

@@ -600,7 +600,7 @@ Search for a search tool in the order provided by `dotspacemacs-search-tools'."
   (use-package helm-github-stars
     :commands (helm-github-stars)
     :init
-    (setq helm-github-stars-username "zilongshanren")))
+    (setq helm-github-stars-username "ZhengWG")))
 
 
 
@@ -1062,7 +1062,7 @@ Search for a search tool in the order provided by `dotspacemacs-search-tools'."
     (prodigy-define-service
       :name "Debug Fireball"
       :command "npm"
-      :args '("start" "--" "--nologin" "/Users/guanghui/Github/example-cases")
+      :args '("start" "--" "--nologin" "/Users/zhengwengang/Github/example-cases")
       :cwd "~/Github/fireball/"
       :tags '(work)
       :kill-signal 'sigkill

@@ -225,7 +225,7 @@ comment box."
 
 (defun my-setup-develop-environment ()
   (interactive)
-  (when (my-project-name-contains-substring "guanghui")
+  (when (my-project-name-contains-substring "wengangzheng")
     (cond
      ((my-project-name-contains-substring "cocos2d-x")
       ;; C++ project don't need html tags

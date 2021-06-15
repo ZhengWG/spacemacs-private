@@ -16,6 +16,8 @@
 (define-key 'help-command (kbd "C-v") 'find-variable)
 (define-key 'help-command (kbd "C-l") 'find-library)
 (define-key 'help-command (kbd "C-i") 'info-display-manual)
+(global-unset-key (kbd "C-SPC"))
+(global-set-key (kbd "M-SPC") 'set-mark-command)
 
 ;; (define-key 'ivy-occur-grep-mode-map (kbd "C-d") 'evil-scroll-down)
 (global-set-key (kbd "C-x p s") 'find-file-in-project)
